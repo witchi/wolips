@@ -77,7 +77,7 @@ on the ObjectStyle Group, please see http://objectstyle.org/
          os="macosx"
          download-size="0"
          install-size="0"
-         version="1.0.6"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -85,7 +85,7 @@ on the ObjectStyle Group, please see http://objectstyle.org/
          os="win32"
          download-size="0"
          install-size="0"
-         version="1.0.6"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -93,7 +93,7 @@ on the ObjectStyle Group, please see http://objectstyle.org/
          os="macosx"
          download-size="0"
          install-size="0"
-         version="1.0.6"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -101,7 +101,21 @@ on the ObjectStyle Group, please see http://objectstyle.org/
          os="win32"
          download-size="0"
          install-size="0"
-         version="1.0.6"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.objectstyle.wolips.goodies.core.linux"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.objectstyle.wolips.goodies.ui.linux"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>
