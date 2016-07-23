@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: WOLips Goodies UI Linux Plug-in
+Bundle-SymbolicName: org.objectstyle.wolips.goodies.ui.linux;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: org.objectstyle.wolips.goodies.ui.linux.LinuxPlugin
+Bundle-Vendor: phosco.info
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.core.resources,
+ org.objectstyle.wolips.goodies.core.linux;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: org.objectstyle.wolips.goodies.ui.linux,
+ org.objectstyle.wolips.goodies.ui.linux.actions
