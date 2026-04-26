@@ -122,6 +122,7 @@ import org.objectstyle.wolips.eomodeler.core.model.EOModel;
 import org.objectstyle.wolips.eomodeler.core.model.EOModelGroup;
 import org.objectstyle.wolips.eomodeler.core.model.EOModelVerificationFailure;
 import org.objectstyle.wolips.eomodeler.core.model.EORelationship;
+import org.objectstyle.wolips.eomodeler.core.model.EntityNameCapitalizationFailure;
 import org.objectstyle.wolips.eomodeler.core.model.EORelationshipOptionalityMismatchFailure;
 import org.objectstyle.wolips.eomodeler.core.model.EOStoredProcedure;
 import org.objectstyle.wolips.eomodeler.core.model.IEOAttribute;
@@ -901,6 +902,20 @@ public class EOModelEditor extends MultiPageEditorPart implements IResourceChang
 				EOModelVerificationFailure failure = failuresIter.next();
 				if (failure instanceof EORelationshipOptionalityMismatchFailure) {
 					failuresIter.remove();
+				}
+			}
+		}
+
+		String exclusionPattern = Activator.getDefault().getPreferenceStore().getString(PreferenceConstants.ENTITY_NAME_CAPITALIZATION_EXCLUSION_PATTERN);
+		if (exclusionPattern != null && !exclusionPattern.trim().isEmpty()) {
+			Iterator<EOModelVerificationFailure> failuresIter = failures.iterator();
+			while (failuresIter.hasNext()) {
+				EOModelVerificationFailure failure = failuresIter.next();
+				if (failure instanceof EntityNameCapitalizationFailure) {
+					String entityName = ((EOEntity) failure.getFailedObject()).getName();
+					if (entityName != null && entityName.matches(exclusionPattern)) {
+						failuresIter.remove();
+					}
 				}
 			}
 		}

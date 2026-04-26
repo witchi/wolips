@@ -2581,7 +2581,7 @@ public class EOEntity extends UserInfoableEOModelObject<EOModel> implements IEOE
 				failures.add(new EOModelVerificationFailure(myModel, this, "The entity " + getName() + "'s name has a space in it.", false));
 			}
 			if (!StringUtils.isUppercaseFirstLetter(myName)) {
-				failures.add(new EOModelVerificationFailure(myModel, this, "Entity names should be capitalized, but " + getName() + " is not.", true));
+				failures.add(new EntityNameCapitalizationFailure(myModel, this, "Entity names should be capitalized, but " + getName() + " is not.", true));
 			}
 		}
 

@@ -68,6 +68,7 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
     prefs.setDefault(PreferenceConstants.CHANGE_PERSPECTIVES_KEY, true);
     prefs.setDefault(PreferenceConstants.OPEN_IN_WINDOW_KEY, true);
     prefs.setDefault(PreferenceConstants.SHOW_RELATIONSHIP_ATTRIBUTE_OPTIONALITY_MISMATCH, false);
+    prefs.setDefault(PreferenceConstants.ENTITY_NAME_CAPITALIZATION_EXCLUSION_PATTERN, "");
     prefs.setDefault(PreferenceConstants.SHOW_ERRORS_IN_PROBLEMS_VIEW_KEY, true);
     prefs.setDefault(PreferenceConstants.OPEN_WINDOW_ON_VERIFICATION_ERRORS_KEY, true);
     prefs.setDefault(PreferenceConstants.OPEN_WINDOW_ON_VERIFICATION_WARNINGS_KEY, true);
